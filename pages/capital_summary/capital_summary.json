@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "资产汇总",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#1eabf1",
+  "usingComponents": {"ec-canvas":"../../ec-canvas/ec-canvas"}
+}

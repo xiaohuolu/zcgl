@@ -1,0 +1,27 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+	<view class="home-box">
+		<image mode="widthFix" src="../../images/login_icon.png"></image>
+		<text>资产管理系统</text>
+	</view>
+
+	<view class="input-group">
+		<view class="input-item">
+			<image mode="widthFix" src="../../images/phone_icon.png"></image>
+			<input type="text" required bindinput="getPhoneValue" placeholder="请输入账号"></input>
+		</view>
+		<view class="input-item">
+			<image mode="widthFix" src="../../images/phone_icon.png"></image>
+			<input type="password" required bindinput="getPassWord" placeholder="请输入密码"></input>
+		</view>
+		<!-- <view class="input-item" style="position:relative">
+			<image mode="widthFix" src="../../images/password_icon.png"></image>
+			<input type="number" maxlength="8" bindinput="getCode"  placeholder="请填写短信验证码"></input>
+			<button size="mini" type="default"  plain="false" class='code-btn' 
+bindtap='sendCodeBtn' style='color:{{color}};  background:{{bgColor}}' 
+disabled="{{disabled}}">{{getCode}}</button>
+		</view> -->
+	</view>
+
+	<view class="common-btn" bindtap="toIndex">登  录</view>
+</view>

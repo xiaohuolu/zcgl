@@ -1,0 +1,28 @@
+<view class="container">
+  
+   <view class="option">
+     <view class="item" bindtap="toInventoryAdd">
+       <image mode="widthFix" src="/images/add_icon.png"></image>
+       <text>新增盘点</text>
+     </view>
+     <view class="item" bindtap="toAudit">
+       <image mode="widthFix" src="/images/audit_icon.png"></image>
+       <text>待审核</text>
+     </view>
+     <view class="item" bindtap="toCapital">
+       <image mode="widthFix" src="/images/search_icon.png"></image>
+       <text>资产查询</text>
+     </view>
+     <view class="item" bindtap="Inventory_records">
+       <image mode="widthFix" src="/images/record_icon.png"></image>
+       <text>盘点记录</text>
+     </view>
+     <view class="item" bindtap="toCapitalSummary">
+       <image mode="widthFix" src="/images/assets_icon.png"></image>
+       <text>资产汇总</text>
+     </view>
+  
+  
+   </view> 
+
+</view>

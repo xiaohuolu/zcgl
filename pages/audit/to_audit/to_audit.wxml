@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="picker-group">
+    <text>状态：</text>
+    <view class="picker">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{picker}}"   range-key="dictLabel">
+        <view class="picker">
+          {{picker[index].dictLabel}}
+        </view>
+      </picker>
+      <image mode="widthFix" src="/images/arrow_bottom_icon.png"></image>
+    </view>
+  </view>
+
+  <view class="textarea-group">
+    <text>描述：</text>
+    <textarea name="instructions" placeholder="请输入" required bindinput="bindTextAreaBlur"></textarea>
+  </view>
+
+  <view class="common-btn" style="margin-top:200rpx;width:300rpx;" bindtap="toAudit">提交</view>
+</view>

@@ -1,0 +1,68 @@
+/* pages/inventory_add/inventory_add.wxss */
+.container{
+  padding:20rpx 40rpx;
+}
+.scan-btn{
+  background:#1eabf1;
+  color:#fff;
+  font-size: 36rpx;
+  display: flex;
+  align-items: center;
+  padding:25rpx 40rpx;
+  justify-content: center;
+  width:45vw;
+  border-radius: 10rpx;
+  margin:150rpx auto 0;
+}
+.scan-btn image{
+  width:40rpx;
+  margin-right:20rpx;
+}
+ 
+.picker-group{
+  margin-top:20rpx;
+}
+ 
+.btn-add{
+  width:80rpx;
+}
+.add-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-item{
+  padding:50rpx 0;
+  border-bottom:1px solid #eee;
+}
+.weui-cell{
+  display: flex;
+  align-items: center; 
+}
+.dialog{
+  position: fixed;
+  height:100%;
+  overflow:auto;
+  width:100%;
+  top:0;
+  left:0;
+  background:#fff;
+  padding:50rpx;  
+  z-index:99;
+  box-sizing: border-box;
+}
+.btn-group{
+  width:100%;
+  margin-top:100rpx;
+  padding:0 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.btn-group view{
+  padding:10rpx 30rpx;
+  background:#1eabf1;
+  color:#fff;
+}
+ 

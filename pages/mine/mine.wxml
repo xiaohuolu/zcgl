@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="main">
+    <image mode="widthFix" src="/images/mine_icon3.png"></image>
+    <view class="information">
+      <view class="name-section">
+        <text class="name">{{userInfo.nickName || ''}}</text>
+        <text class="department">{{userInfo.dept.deptName || ''}}</text>
+      </view>
+      <view class="position">
+        {{userInfo.dept.leader || ''}}
+      </view>
+    </view>
+  </view>
+
+   <view class="out-btn" bindtap="out">退出登录</view>
+</view>

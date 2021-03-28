@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="text-group">
+    <text>资产名称：</text>
+    <text>{{info.name || '暂无数据'}}</text>
+  </view>
+  <view class="text-group">
+    <text>资产编号：</text>
+    <text>{{info.code || '暂无数据'}}</text>
+  </view>
+  <view class="text-group">
+    <text>资产类别：</text>
+    <text>{{info.params.typeValue || '暂无数据'}}</text>
+  </view>
+  <view class="text-group">
+    <text>所属公司：</text>
+    <text>{{info.params.deptIdValue || '暂无数据'}}</text>
+  </view>
+  <view class="text-group">
+    <text>所属部门：</text>
+    <text>{{info.params.deptIdValue || '暂无数据'}}</text>
+  </view>
+  <view class="text-group" wx:if="{{info.image.length}}">
+    <text>照片：</text>
+    <image mode="widthFix" src="{{info.image}}"></image>
+  </view>
+  <view class="text-group">
+    <text>保管人/使用人：</text>
+    <text>{{info.params.userIdValue || '暂无数据'}}</text>
+  </view>
+  <view class="text-group">
+    <text>使用期限：</text>
+    <text>{{info.usedYears || '暂无数据'}}</text>
+  </view>
+ 
+  <view class="text-group">
+    <text>状态：</text>
+    <text>{{info.params.statusValue || '暂无数据'}}</text>
+  </view>
+   <view class="text-group">
+    <text>末次盘点日期：</text>
+    <text>{{info.params.assetsRecord.updateTime || '暂无数据'}}</text>
+  </view>
+  <view class="text-group">
+    <text>本次盘点日期：</text>
+    <text>{{info.params.assetsRecord.createTime || '暂无数据'}}</text>
+  </view>
+ 
+  <view class="text-group">
+    <text>盘点描述：</text>
+    <text>{{info.remark || '暂无数据'}}</text>
+  </view>
+
+	<view wx:if="{{info.params.assetsRecord.existStatus==0}}" class="common-btn" bindtap="toImmediately">立即盘点</view>
+
+</view>

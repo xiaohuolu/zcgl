@@ -1,0 +1,74 @@
+<view class="container">
+  <view class="inventory-section">
+    <view class="picker-group">
+      <text>组织机构:</text>
+      <view class="picker">
+        <picker bindchange="deptPickerChange" value="{{deptIndex}}" range="{{deptPicker}}" range-key="dictLabel">
+          <view class="picker">
+            {{deptPicker[deptIndex].dictLabel}}
+          </view>
+        </picker>
+        <image mode="widthFix" src="/images/arrow_bottom_icon.png"></image>
+      </view>
+    </view>
+
+    
+
+    <view class="picker-group">
+      <text>置购日期:</text>
+      <view class="picker">
+        <picker mode="date" bindchange="bindDateChange" value="{{dateData}}" start="1990-01-01">
+          <view class="picker">
+            {{dateData}}
+          </view>
+        </picker>
+        <!-- <image mode="widthFix" src="/images/arrow_bottom_icon.png"></image> -->
+      </view>
+    </view>
+ 
+    <view class="search">
+      <text class="search-btn" style="margin-right:10rpx" bindtap="searchBtn">查询</text>
+      <text class="search-btn" bindtap="resetBtn">重置</text>
+    </view>
+  </view>
+
+  <view class="list-wrap">
+    <view class="statistical-section">
+      <view class="statistical-item">
+        <text>{{data.typeRootNumber || 0}}</text>
+        <text>资产种类(种)</text>
+      </view>
+      <view class="statistical-item">
+        <text>{{data.assetsNumber || 0}}</text>
+        <text>资产数量(个)</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="charts-section">
+    <view class="title">
+      <text class="dot"></text>
+      <text>种类统计</text>
+    </view>
+
+
+
+    <view class="chartBg" style="position:relative;height:{{height}}rpx">
+      <ec-canvas id="mychart1" canvas-id="mychart1" ec="{{ ec1 }}"></ec-canvas>
+
+      <text style="position:absolute;right:20rpx;bottom:20rpx;" bindtap="seeMore" wx:if="{{!more}}">查看更多</text>
+    </view>
+
+
+    <view class="title">
+      <text class="dot"></text>
+      <text>状态统计</text>
+    </view>
+    <view class="chartBg1">
+      <ec-canvas id="mychart3" canvas-id="mychart3" ec="{{ ec3 }}"></ec-canvas>
+    </view>
+
+
+  </view>
+
+</view>

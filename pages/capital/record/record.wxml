@@ -1,0 +1,29 @@
+<view class="container">
+
+   <view class="statistical-section">
+     <text>{{list.length}}</text>
+     <text>共计盘点（次）</text>
+   </view>
+
+  <view class="content-box"  wx:for="{{list}}">
+   
+    <view class="text-group">
+      <text>盘点人：</text>
+      <text>{{item.recordUserId || '暂无数据'}}</text>
+    </view>
+    <view class="text-group">
+      <text>盘点时间：</text>
+      <text>{{item.createTime || '暂无数据'}}</text>
+    </view>
+    <view class="text-group">
+      <text>盘点状态：</text>
+      <text>{{item.status || '暂无数据'}}</text>
+    </view>
+    <view class="text-group">
+      <text>盘点描述：</text>
+      <text>{{item.remark || '暂无数据'}}</text>
+    </view>
+  </view>
+ 
+ 
+</view>

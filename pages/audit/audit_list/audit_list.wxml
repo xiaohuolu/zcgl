@@ -1,0 +1,68 @@
+<view class="container">
+  <view class="inventory-section">
+    <view class="text-group">
+      <text>盘点名称：</text>
+      <text>{{summaryInfo.summaryInfo.name || ''}}</text>
+    </view>
+    <view class="text-group">
+      <text>盘点人：</text>
+      <text>{{summaryInfo.summaryInfo.params.recordUserIdValue || ''}}</text>
+    </view>
+    <view class="text-group">
+      <text>盘点时间：</text>
+      <text>{{summaryInfo.summaryInfo.startTime || ''}}</text>
+    </view>
+    <view class="text-group">
+      <text>盘点资产数量：</text>
+      <text>{{summaryInfo.summaryInfo.assetsNumber || 0}}</text>
+    </view> 
+
+    <view class="text-group">
+      <text>审核状态：</text>
+      <text>{{summaryInfo.summaryInfo.params.approveStatusValue || ''}}</text>
+    </view> 
+    <text wx:if="{{summaryInfo.summaryInfo.approveStatus==1 || summaryInfo.summaryInfo.approveStatus==2}}" class="list-btn" bindtap="toAudit">审核</text>
+  </view>
+
+  <view class="list-wrap">
+    <view class="statistical-section">
+      <view class="statistical-item">
+        <text>{{summaryInfo.alreadySummaryNumber || 0}}</text>
+        <text>已盘点总数</text>
+      </view>
+      <view class="statistical-item">
+        <text>{{summaryInfo.summaryNumber || 0}}</text>
+        <text>盘点总数</text>
+      </view>
+      <view class="statistical-item">
+        <text>{{summaryInfo.noSummaryNumber || 0}}</text>
+        <text>未盘点总数</text>
+      </view>
+    </view>
+
+    <view class="summary-section">
+      <text>已盘点信息汇总</text>
+
+
+      <view class="su-table-box" wx:if="{{deptList.length}}">
+        <view class="su-table">
+          <!-- 表格标题 -->
+          <view class="su-tr">
+            <view class="su-th"></view>
+            <view class="su-th" wx:for="{{deptList}}" wx:key="index">{{item.deptName || ''}}</view>
+          </view>
+         
+            <view class="su-tr" wx:for="{{assetsRecord}}" wx:for-item="item" wx:key="index">
+              <view class="su-td">{{item.type  || ''}}</view>
+
+              <view class="su-td" wx:for="{{deptList}}" wx:for-item="itemA" wx:for-index="idx" wx:key="idx">{{item[itemA.deptId]  || ''}}</view>
+             
+            </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

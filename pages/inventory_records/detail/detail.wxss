@@ -1,0 +1,4 @@
+/* pages/Inventory_records/detail/detail.wxss */
+.container{
+  padding:20rpx 40rpx 50rpx;
+}

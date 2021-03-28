@@ -1,0 +1,35 @@
+.container {
+  padding: 0 60rpx;
+  margin-top:150rpx;
+}
+
+.option {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.option .item {
+  width:45%;
+  display: flex;
+  align-items: center;
+  background: #1eabf1;
+  padding: 50rpx 30rpx;
+  margin: 35rpx 0;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+}
+
+.option .item image {
+  max-width: 50rpx;
+  min-width: 50rpx;
+}
+
+.option .item text {
+  font-size: 40rpx;
+  color: #fff;
+  margin-left:5rpx;
+  text-align: center;
+  width:100%;
+}

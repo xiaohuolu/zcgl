@@ -1,0 +1,106 @@
+/**app.wxss**/
+
+/* 带input的样式 */
+.input-group {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  color:#444;
+}
+.input-group text{
+  min-width: 200rpx;
+}
+.input-group input {
+  flex-grow: 1;
+  border: 1px solid #eee;
+  padding: 10rpx 40rpx;
+}
+
+/* 带text的样式 */
+.text-group {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  color: #444;
+}
+
+.text-group text:first-child {
+  min-width: 200rpx;
+}
+
+.text-group text:last-child {
+  color: #777;
+}
+
+.text-group image {
+  width: 450rpx;
+}
+
+/* 带textarea的样式 */
+.textarea-group {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: flex-start;
+  color: #444;
+}
+
+.textarea-group text {
+  min-width: 200rpx;
+}
+
+.textarea-group textarea {
+  flex-grow: 1;
+  color: #777;
+  border: 1px solid #eee;
+  height:250rpx;
+}
+
+
+/* 公共按钮 */
+.common-btn {
+  margin: 80rpx auto;
+  padding: 20rpx 150rpx;
+  color: #fff;
+  text-align: center;
+  background: #1eabf1;
+  width: 20vw;
+}
+
+/* 带框的内容 */
+.content-box{
+  border:1px solid #eee;
+  padding:0 20rpx 20rpx;
+  margin-top:30rpx;
+} 
+
+/* 带picker的内容 */
+.picker-group{
+  display: flex;
+  align-items: center;
+}
+.picker-group>text{
+  width:200rpx;
+}
+.picker-group picker{
+  color:#999;
+  border:1px solid #eee;
+  width:100%;
+  padding:15rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+.picker-group .picker{
+  /* display: flex; */
+  /* align-items: center; */
+  flex-grow: 1;
+  position: relative;
+  /* justify-content: space-between; */
+}
+.picker-group image{
+   width:30rpx;
+   position: absolute;
+   right:10rpx;
+   top:50%;
+   transform: translateY(-50%);
+   z-index:-1;
+}

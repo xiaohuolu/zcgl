@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/inventory_add/inventory_add",
+    "pages/inventory_add/immediately/immediately",
+    "pages/login/login",
+    "pages/demo/demo",
+    "pages/capital_summary/capital_summary",
+    "pages/inventory_records/list/list",
+    "pages/inventory_records/detail_list/detail_list",
+    "pages/inventory_records/inventory_records",
+    "pages/capital/capital",
+    "pages/capital/detail/detail",
+    "pages/capital/record/record",
+    "pages/audit/to_audit/to_audit",
+    "pages/audit/audit_list/audit_list",
+    "pages/audit/audit",
+    "pages/inventory_records/detail/detail",
+    "pages/inventory_add/detail/detail",
+    "pages/mine/mine",
+    "pages/audit/audit_detail/audit_detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "资产管理系统",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#101010",
+    "selectedColor":"#1eabf1",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"/images/work_icon1.png",
+        "selectedIconPath":"/images/work_icon.png",
+        "text": "工作台"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath":"/images/mine_icon1.png",
+        "selectedIconPath":"/images/mine_icon.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

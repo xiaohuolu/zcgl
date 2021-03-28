@@ -1,0 +1,4 @@
+/* pages/inventory_add/immediately/immediately.wxss */
+ .container{
+   padding:20rpx 40rpx;
+ }

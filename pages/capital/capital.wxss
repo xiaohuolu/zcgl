@@ -1,0 +1,66 @@
+/* pages/Inventory_records/list/list.wxss */
+.container{
+  background:#ededf2;
+}
+.inventory-section{
+  padding:40rpx;
+  background:#fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.inventory-section .input-group{
+  width:45%;
+  margin:10rpx;
+}
+.input-group text{
+  min-width: 150rpx;
+  font-size:28rpx;
+}
+.input-group input{
+  color:#555;
+  font-size:24rpx;
+}
+.list-wrap{
+  margin-top:20rpx;
+  background:#fff;
+  padding:60rpx;
+}
+.text-group{
+  margin-top:20rpx;
+}
+ 
+.placeholder-class{
+  font-size:24rpx;
+}
+ 
+ 
+.picker-group{
+  width:45%;
+  margin:10rpx;
+}
+.picker-group text{
+  width:120rpx;
+  font-size:24rpx;
+}
+.picker-group .picker{
+  flex-grow: 1;
+  font-size:24rpx;
+}
+.search{
+  margin-top:20rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ .search-btn{
+  border:1px solid #eee;
+  color:#555;
+  padding:5rpx 20rpx;
+  border-radius: 10rpx;
+}

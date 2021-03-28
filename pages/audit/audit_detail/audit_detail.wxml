@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="text-group">
+    <text>资产名称：</text>
+    <text>戴尔电脑</text>
+  </view>
+  <view class="text-group">
+    <text>资产编号：</text>
+    <text>nxlq-wz-01</text>
+  </view>
+  <view class="text-group">
+    <text>资产类别：</text>
+    <text>电脑</text>
+  </view>
+  <view class="text-group">
+    <text>所属公司：</text>
+    <text>宁夏公路</text>
+  </view>
+  <view class="text-group">
+    <text>所属部门：</text>
+    <text>物资部</text>
+  </view>
+  <view class="text-group">
+    <text>照片：</text>
+    <image mode="widthFix" src="/images/temp.jpeg"></image>
+  </view>
+  <view class="text-group">
+    <text>保管人/使用人：</text>
+    <text>张三</text>
+  </view>
+  <view class="text-group">
+    <text>使用期限：</text>
+    <text>2020-12-31</text>
+  </view>
+  <view class="text-group">
+    <text>描述：</text>
+    <text>此电脑所有硬件设备都可正常使用</text>
+  </view>
+  <view class="text-group">
+    <text>状态：</text>
+    <text>在账</text>
+  </view>
+  <view class="textarea-group">
+    <text>盘点说明：</text>
+    <textarea name="instructions" placeholder="请输入" bindblur="bindTextAreaBlur"></textarea>
+  </view>
+ 
+</view>

@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="inventory-section">
+    <view class="picker-group">
+      <text>类别:</text>
+      <view class="picker">
+        <picker bindchange="typePickerChange" value="{{typeIndex}}" range="{{typePicker}}" range-key="dictLabel">
+          <view class="picker">
+            {{typePicker[typeIndex].dictLabel}}
+          </view>
+        </picker>
+        <image mode="widthFix" src="/images/arrow_bottom_icon.png"></image>
+      </view>
+    </view>
+    <view class="picker-group">
+      <text>组织机构:</text>
+      <view class="picker">
+        <picker bindchange="deptPickerChange" value="{{deptIndex}}" range="{{deptPicker}}" range-key="dictLabel">
+          <view class="picker">
+            {{deptPicker[deptIndex].dictLabel}}
+          </view>
+        </picker>
+        <image mode="widthFix" src="/images/arrow_bottom_icon.png"></image>
+      </view>
+    </view>
+    <view class="input-group">
+      <text>资产名称:</text>
+      <input type="text" bindinput="nameInput" placeholder="请输入" placeholder-class="placeholder-class" />
+    </view>
+    <view class="input-group">
+      <text>资产编号:</text>
+      <input type="text" bindinput="codeInput" placeholder="请输入" placeholder-class="placeholder-class" />
+    </view>
+    <view class="picker-group">
+      <text>资产保管人:</text>
+      <view class="picker">
+        <picker bindchange="userPickerChange" value="{{userIndex}}" range="{{userPicker}}" range-key="dictLabel">
+          <view class="picker">
+            {{userPicker[userIndex].dictLabel}}
+          </view>
+        </picker>
+        <image mode="widthFix" src="/images/arrow_bottom_icon.png"></image>
+      </view>
+    </view>
+    <view class="picker-group">
+      <text>资产状态:</text>
+      <view class="picker">
+        <picker bindchange="statesPickerChange" value="{{statesIndex}}" range="{{statesPicker}}" range-key="dictLabel">
+          <view class="picker">
+            {{statesPicker[statesIndex].dictLabel}}
+          </view>
+        </picker>
+        <image mode="widthFix" src="/images/arrow_bottom_icon.png"></image>
+      </view>
+    </view>
+
+    <view class="search">
+      <text class="search-btn" bindtap="searchBtn">查询</text>
+    </view>
+  </view>
+
+  <view class="list-wrap">
+    <view class="content-box" wx:for="{{list}}" wx:key="index" data-id="{{item.id}}" bindtap="toDetail">
+      <view class="text-group">
+        <text>资产名称：</text>
+        <text>{{item.name}} </text>
+      </view>
+      <view class="text-group">
+        <text>资产编号：</text>
+        <text>{{item.code}}</text>
+      </view>
+      <view class="text-group">
+        <text>组织机构：</text>
+        <text>{{item.params.deptIdValue || '暂无数据'}}</text>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

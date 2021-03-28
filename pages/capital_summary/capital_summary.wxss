@@ -1,0 +1,100 @@
+/* pages/Inventory_records/list/list.wxss */
+ 
+.inventory-section{
+  padding:40rpx 0;
+  background:#fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inventory-section .input-group{
+  width:45%;
+  margin:10rpx;
+}
+.input-group text{
+  min-width: 150rpx;
+  font-size:24rpx;
+}
+.input-group input{
+  color:#555;
+  font-size:24rpx;
+}
+.list-wrap{
+  margin-top:20rpx;
+  background:#fff;
+  padding:30rpx;
+}
+.statistical-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color:#444;
+}
+.statistical-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-group{
+  margin-top:20rpx;
+}
+ 
+.placeholder-class{
+  font-size:26rpx;
+}
+ 
+.search{
+  margin-top:20rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+ .search-btn{
+  border:1px solid #eee;
+  color:#555;
+  padding:5rpx 20rpx;
+  border-radius: 10rpx;
+}
+.charts-section {
+  padding:0 20rpx;
+}
+.charts-section .title{
+  display: flex;
+  align-items: center;
+  margin-top:50rpx;
+}
+.charts-section .title .dot{
+  width:30rpx;
+  height:30rpx;
+  background:#62daf9;
+  border-radius: 50%;
+  margin-right:20rpx;
+}
+
+.chartBg1 {
+  width: 100%;
+  position: relative;
+  height:500rpx;
+  border:1px solid #ccc;
+}
+.more{
+  position: absolute;
+  bottom:20rpx;
+  right:20rpx;
+}
+ 
+.picker-group{
+  width:45%;
+  margin:10rpx;
+}
+.picker-group text{
+  width:120rpx;
+  font-size:24rpx;
+}
+.picker-group .picker{
+  flex-grow: 1;
+  font-size:24rpx;
+}

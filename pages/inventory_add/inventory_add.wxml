@@ -1,0 +1,117 @@
+<view class="container">
+
+  <view wx:if="{{isNoInventory}}" style="position:relative">
+    <view class="input-group">
+      <text>盘点名称：</text>
+      <input type="text" required bindinput="nameInput" placeholder="请输入" />
+    </view>
+
+    <view class="input-group">
+      <text>盘点编号：</text>
+      <input type="text" required bindinput="codeInput" placeholder="请输入" />
+    </view>
+
+    <view class="picker-group">
+      <text>组织机构:</text>
+      <view class="picker">
+        <picker bindchange="deptPickerChange" value="{{deptIndex}}" range="{{deptPicker}}" range-key="dictLabel">
+          <view class="picker">
+            {{deptPicker[deptIndex].dictLabel}}
+          </view>
+        </picker>
+        <image mode="widthFix" src="/images/arrow_bottom_icon.png"></image>
+      </view>
+    </view>
+
+    <view class="picker-group">
+      <text>盘点人:</text>
+      <view class="picker">
+        <picker bindchange="userPickerChange" value="{{userIndex}}" range="{{userPicker}}" range-key="dictLabel">
+          <view class="picker">
+            {{userPicker[userIndex].dictLabel}}
+          </view>
+        </picker>
+        <image mode="widthFix" src="/images/arrow_bottom_icon.png"></image>
+      </view>
+    </view>
+
+    <view class="text-group add-section">
+      <view>
+        <text>盘点时间：</text>
+        <text>{{user.dept.updateTime || '暂无数据'}}</text>
+      </view>
+      <view class="btn-add">
+        <image mode="widthFix" style="width:100%" bindtap="showDialog" src="/images/add_icon1.png"></image>
+      </view>
+    </view>
+
+    <view class="text-group" style="display:block" wx:if="{{labelList.length}}">
+        <text>物资：</text>
+        <view wx:for="{{labelList}}">{{item}}</view>
+    </view>
+
+    <view class="dialog" wx:if="{{isDiglog}}">
+      <view class="checkout-section">
+        <checkbox-group style="margin-top:20rpx" bindchange="deptCheckbox" data-index="{{index}}"
+          wx:for="{{checkboxList}}" wx:for-item="items" wx:key="{{items.value}}">
+          <label class="weui-cell weui-check__label">
+            <view class="weui-cell__hd">
+              <checkbox checked="{{items.checked}}" value="{{items.value}}" />
+            </view>
+            <view class="weui-cell__bd">{{items.label}}</view>
+          </label>
+
+          <checkbox-group style="padding-left:40rpx;margin-top:10rpx" bindchange="childrenCheckbox"
+            data-parentId="{{item.parentId}}" data-value="{{item.value}}" wx:for="{{items.children}}"
+            wx:key="{{item.value}}">
+            <label class="weui-cell weui-check__label">
+              <view class="weui-cell__hd">
+                <checkbox checked="{{item.checked}}" value="{{item.value}}" />
+              </view>
+              <view class="weui-cell__bd">{{item.label}}</view>
+            </label>
+
+          </checkbox-group>
+        </checkbox-group>
+      </view>
+
+      <view class="btn-group">
+        <view bindtap="confirm">确定</view>
+        <view bindtap="close">关闭</view>
+      </view>
+    </view>
+
+
+  </view>
+
+  <view wx:else>
+
+    <view class="list-item" wx:for="{{list}}" wx:key="{{item.id}}">
+
+      <view class="input-group">
+        <text>盘点名称：</text>
+        <input type="text" disabled placeholder="请输入" value="{{item.name || '暂无数据'}}" />
+      </view>
+      <view class="input-group">
+        <text>组织机构：</text>
+        <input type="text" disabled placeholder="请输入" value="{{item.params.deptIdValue || '暂无数据'}}" />
+      </view>
+
+      <view class="input-group">
+        <text>盘点人：</text>
+        <input type="text" disabled placeholder="请输入" value="{{item.params.recordUserIdValue || '暂无数据'}}" />
+      </view>
+      <view class="text-group">
+        <text>盘点时间：</text>
+        <text>{{item.createTime || '暂无数据'}}</text>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="scan-btn" bindtap="getScancode">
+    <image mode="widthFix" src="/images/scan_icon.png"></image>
+    <text>扫一扫立即盘点</text>
+  </view>
+</view>

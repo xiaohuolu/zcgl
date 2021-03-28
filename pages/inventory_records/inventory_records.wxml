@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="content-box" data-id="{{item.id}}" bindtap="toList"  wx:for="{{list}}" wx:key="{{item.id}}">
+    <view class="text-group">
+      <text>盘点名称：</text>
+      <text>{{item.name || '暂无数据'}}</text>
+    </view>
+    <view class="text-group">
+      <text>盘点人：</text>
+      <text>{{item.params.recordUserIdValue || '暂无数据'}}</text>
+    </view>
+    <view class="text-group">
+      <text>盘点时间：</text>
+      <text>{{item.endTime || ''}}</text>
+    </view>
+    <view class="text-group">
+      <text>盘点资产数量：</text>
+      <text>{{item.assetsNumber || 0}}</text>
+    </view>
+    <view class="text-group">
+      <text>末次盘点时间：</text>
+      <text>{{item.endTime || ''}}</text>
+    </view>
+  </view>
+ 
+</view>

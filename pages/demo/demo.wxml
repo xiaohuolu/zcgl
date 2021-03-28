@@ -1,0 +1,13 @@
+<view class="dialog">
+  <view class="checkout-section">
+    <checkbox-group bindchange="checkboxChange" wx:for="{{checkboxList}}" wx:key="{{item.value}}">
+      <label class="weui-cell weui-check__label">
+        <view class="weui-cell__hd">
+          <checkbox value="{{item.value}}" />
+        </view>
+        <view class="weui-cell__bd">{{item.label}}</view>
+      </label>
+
+    </checkbox-group>
+  </view>
+</view>

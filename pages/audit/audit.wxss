@@ -1,0 +1,24 @@
+/* pages/to_audit/to_audit.wxss */
+.container{
+  padding:40rpx;
+}
+.text-group{
+  margin-top:20rpx;
+}
+.content-box{
+  position: relative;
+}
+.btn-group{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width:200rpx;
+  justify-content: space-between;
+  top:75rpx;
+  right:20rpx;
+}
+.btn-group text{
+  border:1px solid #eee;
+  padding:5rpx 10rpx;
+  color:#555;
+}
